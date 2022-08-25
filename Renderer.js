@@ -1,7 +1,4 @@
-// const divPost = (post) =>
-//   `<div class=post id=post><p class=name>${post.name}:</p><p class=post-text>${post.text}</p></div>`;
-// const divComment = (comment) =>
-//   `<div class=comments><p class=name>${comment.text}:</p></div>`;
+
 const Renderer = function () {
   const divPost = (post) =>
     `<div class=post id=${post.id} >
@@ -28,11 +25,9 @@ const Renderer = function () {
       let div = "";
       for (let comment of comments) {
         commentBox += divComment(comment);
-        // $("#posts").append(commentBox);
       }
       div = `<div class=post-container>${postBox}${commentBox}</div>`;
       $("#posts").append(div);
-      // $("#posts").append(commentBox);
     }
   };
   return {
